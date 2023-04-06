@@ -44,7 +44,7 @@ function init() {
     console.log(metadata)
 
 // Call the Bar Function defined below
-    displayBar(sampVal, otuIDs);
+    displayBar(sampVal, otuIDs, otuLabels);
 
 // Call the Bubble Function defined below
     displayBubble(otuIDs, sampVal, otuLabels);
@@ -80,7 +80,7 @@ function optionChanged(){
         console.log(selectionData);       
        
 // Re-Call Bar and Bubble Functions
-        displayBar(newSamp, newOtu);
+        displayBar(newSamp, newOtu, newLabels);
         displayBubble(newOtu, newSamp, newLabels);
 
 // Replace the demographic info with the new demographic info
@@ -97,11 +97,12 @@ function optionChanged(){
  //    and the Demographic Info        //
 ////////////////////////////////////////
 // Bar chart function
-function displayBar(sampVal, otuIDs) {
+function displayBar(sampVal, otuIDs, otuLabels) {
     console.log(`displaybar`)
 // Set the Bar x and y values
     let x = sampVal.slice(0,10).reverse();
     let y = otuIDs.slice(0,10).map(otuID => `OTU ${otuID}`).reverse();
+    text = otuLabels.slice(0,10).reverse();
     console.log(x);
     console.log(y) ;
 // Set the bar chart parameters
@@ -109,6 +110,7 @@ function displayBar(sampVal, otuIDs) {
         x: x,
         y: y,
         type: "bar",
+        text: text,
         orientation: "h",
         marker : {            
             // bgcolor: "aquamarine",

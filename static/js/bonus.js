@@ -26,7 +26,7 @@ function displayWashing(freq) {
       gauge: {
           axis: { range: [0, 9], tickwidth: 1 },
           
-          bar: { color: "Magenta", thickness: 0.1},
+          bar: { color: "white", thickness: 0.1},
           steps: [
               { range: [0, .5], color: "#0D47A1", },
               { range: [.5,1], color: "#1565C0" },
@@ -55,7 +55,7 @@ function displayWashing(freq) {
              
           ],
           threshold: {
-              line: { color: "Magenta", width: 4 },
+              line: { color: "white", width: 4 },
               thickness: 0.75,
               value: freq
             }
@@ -67,7 +67,7 @@ function displayWashing(freq) {
       margin: { t: 25, r: 25, l: 25, b: 25 },
       
       // paper_bgcolor: "cyan",
-      font: { color: "Magenta", family: "Arial" }
+      font: { color: "Black", family: "Arial" }
   };
   Plotly.newPlot("gauge", gaugeChart, gaugeLayout);
 
