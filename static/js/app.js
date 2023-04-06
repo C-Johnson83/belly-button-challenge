@@ -111,8 +111,8 @@ function displayBar(sampVal, otuIDs) {
         type: "bar",
         orientation: "h",
         marker : {            
-            bgcolor: "aquamarine",
-            color: "cyan",
+            // bgcolor: "aquamarine",
+            color: "#F06292",
             line : {
             color:'Magenta',
             width: 2
@@ -151,7 +151,7 @@ function displayBubble(otuIDs, sampVal, otuLabels) {
         marker: {
             size: marker_size,
             color: marker_color,
-            colorscale: 'Blues',
+            colorscale: 'Bluered',
             line: {
                 color: "magenta",
                 width: 2
@@ -162,15 +162,16 @@ function displayBubble(otuIDs, sampVal, otuLabels) {
 // Set the size, title, and other parameters of the chart visualization
     let bubbleLayout = [
         {
-        paper_bgcolor: "aquamarine",
+       
         title: "Top 10 Belly Bacts",
         xaxis:{
             title: "OTU-IDs"
         },
         showlegend: true,
         
-        height: 900,
-        width: 1800,     
+        height: 800,
+        width: 1800, 
+         
     }
     ];
 // Plot the chart when function is called
